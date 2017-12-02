@@ -3,7 +3,6 @@ defmodule Aoc.Day1 do
   def read_file_and_solve() do
     captcha = File.read!("./input/day1.txt")
     |> String.split("", trim: true)
-    
     # part 1
     IO.inspect solve_captcha(captcha, length(captcha) - 1, 1, 0)
     # part 2
