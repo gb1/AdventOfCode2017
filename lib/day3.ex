@@ -1,7 +1,7 @@
 defmodule Aoc.Day3 do
 
-  #@input 361_527 - 1
-  @input 100 - 1
+  @input 361_527 - 1
+  # @input 100 - 1
   @north {0,1}
   @south {0,-1}
   @east {1,0}
@@ -15,10 +15,10 @@ defmodule Aoc.Day3 do
   def solve() do
     #part 1
     spiral = gen_spiral(1, %Spiral{})
-    # IO.inspect manhattan_distance(spiral.coords)
+    IO.inspect manhattan_distance(spiral.coords)
   
     #part 2
-    IO.inspect spiral
+    # IO.inspect spiral
   end
 
   # check the point to the left of the current postion
@@ -85,8 +85,8 @@ defmodule Aoc.Day3 do
     end
 
     value = neighbours_sum(forward, spiral)
-    IO.inspect [forward, value]
-    IO.puts "-------"
+    # IO.inspect [forward, value]
+    # IO.puts "-------"
 
     %Spiral{spiral | coords: forward, points: MapSet.put(spiral.points, forward),
       val_points: Map.put(spiral.val_points, forward, value) }
