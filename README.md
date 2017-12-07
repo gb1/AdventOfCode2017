@@ -1,21 +1,14 @@
-# Aoc
+# 🎄 Advent of Code 2017 🎄
 
-**TODO: Add description**
-
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `aoc` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:aoc, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/aoc](https://hexdocs.pm/aoc).
-
+* Day 1 -
+  [Inverse Captcha](https://github.com/gb1/AdventOfCode2017/blob/master/lib/day1.ex)
+* Day 2 -
+  [Corruption Checksum](https://github.com/gb1/AdventOfCode2017/blob/master/lib/day2.ex)
+* Day 3 -
+  [Spiral Memory](https://github.com/gb1/AdventOfCode2017/blob/master/lib/day3.ex)
+* Day 4 -
+  [High-Entropy Passphrases](https://github.com/gb1/AdventOfCode2017/blob/master/lib/day4.ex)
+* Day 5 -
+  [A Maze of Twisty Trampolines, All Alike](https://github.com/gb1/AdventOfCode2017/blob/master/lib/day5.ex)
+* Day 6 -
+  [Memory Reallocation](https://github.com/gb1/AdventOfCode2017/blob/master/lib/day6.ex)

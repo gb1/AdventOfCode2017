@@ -1,10 +1,13 @@
 defmodule Aoc.Day6 do
   
   # problem input
-  #@banks [10,	3, 15, 10, 5,	15,	5, 15, 9,	2, 5, 8, 5, 2, 3,	6]
+  # @banks [10,	3, 15, 10, 5,	15,	5, 15, 9,	2, 5, 8, 5, 2, 3,	6]
   
   # sample input:
   @banks [0, 2, 7, 0]
+
+  @dupe [2,4,1,2]
+  # @dupe [1, 1, 0, 15, 14, 13, 12, 10, 10, 9, 8, 7, 6, 4, 3, 5]
 
   @doc ~S"""
   solve part 1
@@ -13,16 +16,18 @@ defmodule Aoc.Day6 do
   """
   def solve() do
     banks = @banks |> list_to_map
-    banks |> spread_banks(0, [Map.values(banks)], false)
+    banks |> spread_banks(0, [Map.values(banks)], false, 0)
   end
 
-  def spread_banks(_banks, swaps, _new_banks, true) do
+  def spread_banks(banks, swaps, new_banks, true, swaps_count) do
     IO.puts "part 1:"
     IO.inspect swaps
+    IO.inspect new_banks |> List.last
     IO.puts "part 2:"
-    #IO.inspect total_swaps
+    IO.inspect swaps_count - 1
   end
-  def spread_banks(banks, swaps, new_banks, _found_dupe) do
+
+  def spread_banks(banks, swaps, new_banks, _found_dupe, swaps_count) do
     {start, moves} = banks |> max_value
     
     banks = Map.put(banks, start, 0)
@@ -32,7 +37,12 @@ defmodule Aoc.Day6 do
 
     new_banks = new_banks ++ [Map.values(banks)]
 
-    spread_banks(banks, swaps + 1, new_banks, match?(new_banks))
+    swaps_count = case Enum.member?(new_banks, @dupe) do
+      true -> swaps_count + 1
+      false -> swaps_count
+    end
+
+    spread_banks(banks, swaps + 1, new_banks, match?(new_banks), swaps_count)
   end
 
   @doc ~S"""
