@@ -33,8 +33,7 @@ defmodule Aoc.Day12 do
     find_children(adj_list, children ++ next_children, seen ++ next_children) 
   end
 
-  def find_groups(adj_list, groups, 1999) do
-     
+  def find_groups(_adj_list, groups, 1999) do
      Enum.map(groups, &(List.first(&1)))
      |> Enum.sort
      |> Enum.dedup
