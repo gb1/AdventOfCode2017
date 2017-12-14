@@ -7,8 +7,19 @@ defmodule Aoc.Day10 do
     
   end
 
-  def knot(skip, position, input_len) do
-    
+  @doc ~S"""
+  iex> Aoc.Day10.knot([0,1,2,3,4], 0, 3, 0)
+  [2,1,0,3,4]
+
+  iex>Aoc.Day10.knot([2,1,0,3,4], 3, 4, 3)
+  []
+  """
+  def knot(list, position, input_len, skip_size) do
+    {reverse, rest} = Enum.split(list, input_len)
+
+    Enum.reverse(reverse) ++ rest
+  # knot(list, position + input_len, )
+    # Stream.cycle([0,1,2,3,4]) |> Stream.take(5) |> Enum.to_list
   end
 
 end

@@ -96,11 +96,11 @@ defmodule Aoc.Day7 do
     child_weights + weights[node]
   end
 
-  def get_next_row(row, adj_list) do
-    row
-    |> Enum.reduce([], fn(x, acc) ->
+  def get_next_row(_row, _adj_list) do
+    # row
+    # |> Enum.reduce([], fn(x, acc) ->
       
-    end)
+    # end)
   end
 
 end

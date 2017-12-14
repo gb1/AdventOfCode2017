@@ -19,7 +19,7 @@ defmodule Aoc.Day6 do
     banks |> spread_banks(0, [Map.values(banks)], false, 0)
   end
 
-  def spread_banks(banks, swaps, new_banks, true, swaps_count) do
+  def spread_banks(_banks, swaps, new_banks, true, swaps_count) do
     IO.puts "part 1:"
     IO.inspect swaps
     IO.inspect new_banks |> List.last
