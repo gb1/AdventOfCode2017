@@ -7,7 +7,7 @@ defmodule Aoc.Day15 do
   @b_sample 8921
 
   def solve() do
-    part1(0, @a_sample, @b_sample, 0)
+    part1(0, @a, @b, 0)
   end
 
   def part1(40_000_000, _a, _b, matches), do: matches 
@@ -25,6 +25,6 @@ defmodule Aoc.Day15 do
   
   def next_b(b), do: rem(b * 48271, 2147483647)
 
-  def first_16_bits(i), do: Integer.to_string(i,2) |> String.reverse |> String.slice(0,15)
+  def first_16_bits(i), do: Integer.to_string(i,2) |> String.reverse |> String.slice(0,16)
 
 end
