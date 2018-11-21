@@ -23,7 +23,9 @@ defmodule Aoc.Mixfile do
     [
       # {:dep_from_hexpm, "~> 0.3.0"},
       {:combination, "~> 0.0.3"},
-      {:mix_test_watch, "~> 0.5", only: :dev, runtime: false}
+      {:mix_test_watch, "~> 0.5", only: :dev, runtime: false},
+      {:exsync, "~> 0.2", only: :dev}
+
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
     ]
   end

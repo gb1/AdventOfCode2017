@@ -1,8 +1,8 @@
 defmodule AocTest do
   use ExUnit.Case
-  alias Aoc.Day13
-  alias Aoc.Day13.Wall
-  doctest Aoc.Day18
+  #alias Aoc.Day13
+  #alias Aoc.Day13.Wall
+  #doctest Aoc.Day18
 
   # test "scanner goes down" do
   #   wall = %Wall{scanner_pos: 1, bricks: 3, direction: :down}
